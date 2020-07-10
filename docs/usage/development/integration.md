@@ -34,7 +34,14 @@ npm install tauri --save
 
 <Command name="init" />
 
-This command will place a new folder in your current working directory, `src-tauri`.
+This command will ask you a few questions about your app:
+
+- App Name: This will set the executable and installer names
+- Window Title: This will set the title in the window's top bar
+- Web Asset Dir: This is relative to `<current dir>/src-tauri`, and should point to the folder that contains your `index.html` and any other web assets for your app
+- Dev Server URL: This determines what URL to load during `tauri dev`
+
+It will then place a new folder in your current working directory, `src-tauri`.
 
 ```sh
 └── src-tauri
