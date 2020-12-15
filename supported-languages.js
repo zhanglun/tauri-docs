@@ -8,4 +8,5 @@ module.exports = {
   // 'pt-br': 'Português',
   // 'zh-hant': '繁體中文',
   // ru: 'русский',
+  tr: 'Türk'
 }
