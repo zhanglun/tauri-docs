@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs')
 // const versions = require('./versions.json')
 
 const languages = require('./supported-languages')
@@ -27,6 +28,7 @@ const siteConfig = {
     colorMode: {
       defaultMode: 'dark'
     },
+    version: fs.readFileSync('./version.txt', 'utf-8'),
     // announcementBar: {
     //   id: 'testapp',
     //   content: t.config.announcementBar.validationApp,
