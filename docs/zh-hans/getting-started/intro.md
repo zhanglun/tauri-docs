@@ -6,7 +6,7 @@ import OSList from '@theme/OSList'
 
 欢迎来到 Tauri!
 
-Tauri 是一个多语言的通用系统，可组合性很强，允许工程师进行各种应用。它使用[Rust](https://www.rust-lang.org/)工具和在Webview中呈现的HTML的组合来为桌面计算机构建应用程序。使用Tauri构建的应用可以附带任意数量的可选JS API / Rust API，这样webview就可以通过消息传递来控制系统。
+Tauri 是一个多语言的通用系统，可组合性很强，允许工程师进行各种应用。它使用 [Rust](https://www.rust-lang.org/) 工具和在 Webview 中呈现的HTML的组合来为桌面计算机构建应用程序。使用 Tauri 构建的应用可以附带任意数量的可选JS API / Rust API，这样webview就可以通过消息传递来控制系统。
 
 任何可以在网站上展示的内容都可以 Tauri webview 应用中展示。
 
@@ -33,7 +33,7 @@ Tauri 是一个多语言的通用系统，可组合性很强，允许工程师�
 5. 使用 `tauri dev` 启用热模块重新加载和 webview devtools 等功能开发您的应用程序
 6. 使用 `tauri build` 将你的应用打包成一个小小的安装程序
 
-### 设置你的环境
+### 设置你的环境{#setting-up-your-environment}
 
 在创建一个应用之前，你需要安装和配置一些开发者工具。这个指南假设你已经知道什么是命令行，如何在操作系统上安装软件包，并且通常了解计算的开发方面的方法。
 

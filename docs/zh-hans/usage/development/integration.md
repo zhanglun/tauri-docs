@@ -1,5 +1,5 @@
 ---
-title: Integrate with Tauri
+title: 与 Tauri 集成
 ---
 
 import Alert from '@theme/Alert'
@@ -7,72 +7,75 @@ import Command from '@theme/Command'
 import Link from '@docusaurus/Link'
 
 <Alert title="Please note" type="warning" icon="alert">
-  You must have completed all the steps required for setting up the development environment on your machine. If you haven't done this yet, please see the <a href="/docs/getting-started/intro#setting-up-your-environment"> setup page for your operating system</a>.
+  你必须在你的机器上完成所有开发环境设置的步骤。如果你还没有完成，请查看  <a href="/docs/getting-started/intro#setting-up-your-environment"> 适用于你的操作系统的设置页面</a>
 </Alert>
 
-There are two ways to integrate with Tauri depends on your need:
-- [Start a new Tauri project](#1-start-a-new-tauri-project)
-- Or [add Tauri to existing project](#1-add-tauri-to-existing-project)
+根据你的需要，有两种与 Tauri 集成的方法：
 
-### 1. Start a New Tauri Project
+- [开始一个新的 Tauri 项目](#1-start-a-new-tauri-project)
+- 或者 [添加 Tauri 到已有的项目](#1-add-tauri-to-existing-project)
+
+### 1、开始一个新的 Tauri 项目 {#1-start-a-new-tauri-project}
 
 ```bash
 yarn create tauri-app
-#OR
+# 或者
 npm x create-tauri-app
 ```
 
-Just follow the instructions and choose the web frontend framework you prefer. `create-tauri-app` will create a template project depends on your inputs. You can go straight to [check `tauri info`](#3-check-tauri-info-to-make-sure-everything-is-set-up-properly) after this.
+只需按照说明，并选择你喜欢的 Web 前端框架即可。 `create-tauri-app` 将会根据你的输入创建一个模板项目。完成之后你可以直接[检查 tauri 的信息](#3-check-tauri-info-to-make-sure-everything-is-set-up-properly)
 
-### 1. Add Tauri to Existing Project:
+### 1、添加 Tauri 到已有的项目:{#1-add-tauri-to-existing-project}
 
 The Tauri CLI tool helps you build your project, so install it at first.
 
-You can install Tauri CLI [using `Node.js`](#Install-Tauri-CLI-package-as-a-dev-dependency:) or [using `Rust`](#Alternatively,-install-Tauri-CLI-as-a-cargo-subcommand:)
+Tauri CLI 工具帮你构建你的项目，所以先安装它。
 
-#### Install Tauri CLI package as a dev dependency:
+你可以[使用 `Node.js`](#Install-Tauri-CLI-package-as-a-dev-dependency) 或者 [使用 `Rust`](#Alternatively-install-Tauri-CLI-as-a-cargo-subcommand) 安装 Tauri CLI。
+
+#### 将 Tauri CLI 安装为开发依赖项 {#Install-Tauri-CLI-package-as-a-dev-dependency}
 
 ```bash
 cd project-folder
 
-# Not required if you already have a package.json:
+# 如果已经有 package.json，不需要
 # yarn init
-# OR
+# 或者
 # npm init
 
 yarn add -D @tauri-apps/cli
-# OR
+# 或者
 npm install -D @tauri-apps/cli
 ```
 
 <Alert title="Note">
-  You can install Tauri as both a local and a global dependency, but we recommend installing it locally.
+  你可以将 Tauri 安装为本地依赖或者全局依赖, 但是我们推荐安装到本地。
 </Alert>
 
-If you decide to use Tauri as a local package with npm (not yarn), you will have to define a custom script to your package.json:
+如果你决定用将 Tauri作为npm的本地包来使用，你需要在 `package.json` 中定义自定义的脚本：
 
 ```js title=package.json
 {
-  // This content is just a sample
+  // 这只是一个例子
   "scripts": {
     "tauri": "tauri"
   }
 }
 ```
 
-#### Alternatively, install Tauri CLI as a cargo subcommand:
+#### 或者，将 Tauri CLI 作为一个 cargo 子命令安装{#Alternatively-install-Tauri-CLI-as-a-cargo-subcommand}
 
-This will install `tauri-cli` as a Cargo subcommand on the cargo binary folder (by default on `$HOME/.cargo/bin`):
+这会将 `tauri-cli` 作为 cargo 的一个子命令，安装在 cargo 的二进制文件夹中（默认在 `$HOME/.cargo/bin`)：
 
 ```bash
 cargo install tauri-cli --version ^1.0.0-beta
 ```
 
-For more installation options, see [`cargo install`](https://doc.rust-lang.org/cargo/commands/cargo-install.html#description)
+更多的安装选项，查看 [`cargo install`](https://doc.rust-lang.org/cargo/commands/cargo-install.html#description)
 
-#### Install Tauri API Package as a Dependency (optional):
+#### 将 Tauri API 安装为依赖项 (可选){#Install-Tauri-API-Package-as-a-Dependency-optional}
 
-The `@tauri-apps/api` package is recommended for projects using ES modules or modern build tools such as Webpack or Vite. It is the most secure way to access the Tauri APIs.
+推荐在使用了 ES Modules 或者现代构建工具(比如 Webpack 或者 Vite) 的项目中使用 `Tauri-apps/api`。这是访问 Tauri API 最安全的方式 
 
 ```bash
 yarn add @tauri-apps/api
@@ -80,11 +83,11 @@ yarn add @tauri-apps/api
 npm install @tauri-apps/api
 ```
 
-### 2. Initialize Tauri in Your App
+### 2、在你的应用中初始化 Tauri{#Initialize-Tauri-in-Your-App}
 
 <Command name="init" />
 
-This command will place a new folder in your current working directory, `src-tauri`.
+这个命令会在当前操作的目录路径中创建一个新的文件夹`src-tauri`。
 
 ```sh
 └── src-tauri
@@ -115,11 +118,11 @@ This command will place a new folder in your current working directory, `src-tau
         └── main.rs
 ```
 
-### 3. Check `tauri info` to Make Sure Everything Is Set up Properly:
+### 3. 检查 tauri 信息，确保一切设置正确
 
 <Command name="info" />
 
-Which should return something like:
+它应该返回类似的信息：
 
 ```
 Operating System - Darwin(16.7.0) - darwin/x64
@@ -153,13 +156,12 @@ App
   bundler - Rollup
 ```
 
-This information can be very helpful when triaging problems.
+在对问题进行分类时，这些信息将会非常有帮助。
 
-### Patterns
+### 模式
 
-We've also defined prebuilt configurations called "Patterns". They may help you to customize Tauri to fit your needs.
-[See more about patterns](/docs/usage/patterns/about-patterns).
+我们已经定义了称之为“模式”的预构建配置。它们可能可以帮助你自定义 Tauri，以满足你的需求。[查看更多关于模式的内容](/docs/usage/patterns/about-patterns)。
 
-## Vue CLI Plugin Tauri
+## Vue CLI 插件
 
-If you are using Vue CLI, it is recommended to use the official [CLI plugin](https://github.com/tauri-apps/vue-cli-plugin-tauri).
+如果你正在使用 Vue CLI，推荐使用官方的 [CLI 插件](https://github.com/tauri-apps/vue-cli-plugin-tauri)。

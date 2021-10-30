@@ -1,26 +1,27 @@
 ---
-title: Introduction
+title: 使用介绍 
 ---
 
-This part of the documentation is dedicated to learning how to use Tauri.
+这部分的文档专门用于学习如何使用 Tauri。
 
-Tauri provides a [CLI](/docs/api/cli), a Rust API, and a [JavaScript API](/docs/api/js/index) that you can use in your project. Because raw docs can be quite scary to newcomers (especially people who have never played with Rust before), we've created this "learn by example" section.
+Tauri 提供了一个 [CLI](/docs/api/cli)，Rust API，和 [JavaScript API](/docs/api/js/index)， 你可以在你的项目中使用。因为原始文档对于新手（尤其是以前从未接触过 Rust 的人）来说可能非常可怕，所以我们创建了这个“通过实例学习”部分。
 
-Here you will find guides and techniques to start a new project or add to your own project in order to fulfill your goals.
+在这里，你将找到启动新项目或添加到你自己的项目，以实现您的目标的指南和技巧。
 
-## Tauri Development Workflow
+## Tauri 开发工作流程
 
-- [Integrate with Tauri](/docs/usage/development/integration)
-- [Development Cycle](/docs/usage/development/development)
-- [Debugging](/docs/usage/development/debugging)
-- [App Publishing](/docs/usage/development/publishing)
-- [Updating Packages](/docs/usage/development/updating)
+- [与 Tauri 集成](/docs/usage/development/integration)
+- [开发周期](/docs/usage/development/development)
+- [调试](/docs/usage/development/debugging)
+- [应用发布](/docs/usage/development/publishing)
+- [更新软件包](/docs/usage/development/updating)
 
 
-## Guides
+## 指南
 
-- [How to embed custom binaries](/docs/usage/guides/bundler/sidecar)
-- [How to customize app icons](/docs/usage/guides/visual/icons)
+- [如何嵌入二进制](/docs/usage/guides/bundler/sidecar)
+- [如何定制应用的图标](/docs/usage/guides/visual/icons)
 
-## Others
-- [Understanding Tauri Patterns](/docs/usage/patterns/about-patterns)
+## 其他
+
+- [理解 Tauri 的模式](/docs/usage/patterns/about-patterns)

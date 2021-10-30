@@ -10,7 +10,7 @@
       "description": "Tauri 是一个框架，用于为所有主要桌面平台构建小巧、快速的二进制文件。 开发人员可以集成任何可编译为 HTML、JS 和 CSS 的前端框架，以构建他们的用户界面。",
       "subtitle": "使用 Web 前端构建<br />更小、更快、更安全的桌面应用程序",
       "learnMore": "阅读更多",
-      "getStarted": "快速开始",
+      "getStarted": "准备开始",
       "feature": {
         "seeMore": "查看更多",
         "items": [
