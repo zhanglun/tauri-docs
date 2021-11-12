@@ -15,19 +15,19 @@ import Rater from '@theme/Rater'
   <div className="col col--4">
     <table>
       <tr>
-        <td>Ease of Use</td>
+        <td>易用性</td>
         <td><Rater value="0"/></td>
       </tr>
       <tr>
-        <td>Extensibility</td>
+        <td>拓展性</td>
         <td><Rater value="0"/></td>
       </tr>
       <tr>
-        <td>Performance</td>
+        <td>性能</td>
         <td><Rater value="5"/></td>
       </tr>
       <tr>
-        <td>Security</td>
+        <td>安全性</td>
         <td><Rater value="0"/></td>
       </tr>
     </table>
@@ -36,23 +36,23 @@ import Rater from '@theme/Rater'
     <img src={useBaseUrl('img/patterns/GLUI.png')} alt="GLUI" />
   </div>
   <div className="col col--4">
-    Pros:
+    优点
     <ul>
       <li>Framebuffer FTW</li>
       <li>Window events rigged</li>
     </ul>
-    Cons:
+    缺点
     <ul>
       <li>Broken on your machine</li>
     </ul>
   </div>
 </div>
 
-## Description
+## 说明
 
 The GLUI is a research pattern that we will use internally to test approaches using a GLUTIN window. We’re not sure yet if it will make the final cut as a bona fide alternative to WebView, although early tests with transparent and multiwindow are exciting.
 
-## Diagram
+## 示意图
 
 import Mermaid, { colors } from '@theme/Mermaid'
 
@@ -75,9 +75,9 @@ import Mermaid, { colors } from '@theme/Mermaid'
       style RUST fill:${colors.orange.light},stroke:${colors.orange.dark},stroke-width:4px`} />
 
 
-## Configuration
+## 配置
 
-Here's what you need to add to your tauri.conf.json file:
+这是你需要在你的 tauri.conf.json 中添加的配置：
 ```json
 "tauri": {
   "allowlist": {                  // all API endpoints are default false

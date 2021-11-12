@@ -1,42 +1,51 @@
 ---
-title: Updating Packages
+title: 更新软件包
 ---
 import Alert from '@theme/Alert'
 
 <Alert title="Please note" type="warning" icon="alert">
-    Especially during the alpha and beta phases, you are expected to keep all Tauri dependencies and toolchains up to date. There is no support for any versions other than latest.
+	特别是在alpha和beta阶段，你应该保持所有Tauri的依赖关系和工具链是最新的。除最新版本外，不支持任何其他版本。
 </Alert>
 
-## Automatic updates
+## 自动更新
 
-The Tauri JS CLI has a command to install and update all needed dependencies, just run `tauri deps install` or `tauri deps update`.
 
-## Manual updates
+Tauri JS CLI 有一个安装和更新所有依赖的命令，只要运行 `tauri deps install` 或者 `tauri deps update`。
 
-### Update NPM Packages
+## 手动更新
 
-If you are using the `tauri` package:
+### 更新 NPM 关键包
+
+如果你正在使用 `tauri` 包：
+
+
 ```bash
 $ yarn upgrade @tauri-apps/cli @tauri-apps/api --latest
 $ npm install @tauri-apps/cli@latest @tauri-apps/api@latest
 ```
-You can also detect what the latest version of Tauri is on the command line, using:
+
+你也可以使用下面的命令检查Tauri的最新版本：
+
 - `npm outdated @tauri-apps/cli`
 - `yarn outdated @tauri-apps/cli`
 
-Alternatively, if you are using the `vue-cli-plugin-tauri` approach:
+或者，如果你使用`vue-cli-plugin-tauri`的方法：
+
 ```bash
 $ yarn upgrade vue-cli-plugin-tauri --latest
 $ npm install vue-cli-plugin-tauri@latest
 ```
 
-### Update Cargo Packages
-Go to `src-tauri/Cargo.toml` and change `tauri` to
-`tauri = { version = "%version%" }` where `%version%` is the version number shown above. (You can just use the `MAJOR.MINOR`) version, like `0.9`.
+### 更新 Cargo 软件包
 
-Then do the following:
+前往 `src-tauri/Cargo.toml` 并且修改 `tauri` 为
+`tauri = { version = "%version%" }`， `%version%` 是上面展示的数字（这里指的是上一步查看最新版本时返回的版本号）.你也可以只使用`MAJOR.MINOR`，比如 `0.9`。
+
+然后做以下事情：
+
 ```bash
 $ cd src-tauri
 $ cargo update -p tauri
 ```
-You can also run `cargo outdated -r tauri` to get direct information about the core library's latest version.
+
+你也可以执行 `cargo outdated -r tauri` 直接获取关于核心库的最新版本的信息。

@@ -1,5 +1,5 @@
 ---
-title: Cloudbridge
+title: 云桥 
 ---
 
 import Rater from '@theme/Rater'
@@ -9,19 +9,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
   <div className="col col--4">
     <table>
       <tr>
-        <td>Ease of Use</td>
+        <td>易用性</td>
         <td><Rater value="1"/></td>
       </tr>
       <tr>
-        <td>Extensibility</td>
+        <td>拓展性</td>
         <td><Rater value="5"/></td>
       </tr>
       <tr>
-        <td>Performance</td>
+        <td>性能</td>
         <td><Rater value="3"/></td>
       </tr>
       <tr>
-        <td>Security</td>
+        <td>安全性</td>
         <td><Rater value="2"/></td>
       </tr>
     </table>
@@ -30,24 +30,24 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
     <img src={useBaseUrl('img/patterns/Cloudbridge.png')} alt="Cloudbridge" />
   </div>
     <div className="col col--4">
-    Pros:
+    优点
     <ul>
-      <li>All available features</li>
-      <li>No Rust skills required</li>
+      <li>所有特性都可用</li>
+      <li>不需要 Rust 技能</li>
     </ul>
-    Cons:
+    缺点
     <ul>
-      <li>Largest bundle size</li>
-      <li>Hard to separate concerns</li>
+      <li>打包体积最大</li>
+      <li>难以分离关注点</li>
     </ul>
   </div>
 </div>
 
-## Description
+## 说明
 
-The Cloudbridge recipe combines the flexibility of a localhost and the security of the bridge. With so many features, it can be easy to get lost.
+云桥接方法结合了本地主机的灵活性和桥接的安全性。有这么多的功能，很容易让人迷失。
 
-## Diagram
+## 示意图
 
 import Mermaid, { colors } from '@theme/Mermaid'
 
@@ -90,9 +90,9 @@ import Mermaid, { colors } from '@theme/Mermaid'
       `} />
 
 
-## Configuration
+## 配置
 
-Here's what you need to add to your tauri.conf.json file:
+这是你需要在你的 tauri.conf.json 中添加的配置：
 ```json
 "tauri": {
   "allowlist": {

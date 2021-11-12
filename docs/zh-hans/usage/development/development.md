@@ -1,11 +1,11 @@
 ---
-title: Development Cycle
+title: 开发周期
 ---
 
 import Alert from '@theme/Alert'
 import Command from '@theme/Command'
 
-### 1. Start Your Devserver
+### 1. 启动你的开发服务器
 
 Now that you have everything setup, you should start your application development server provided by your UI framework or bundler (assuming you're using one, of course).
 

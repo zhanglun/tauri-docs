@@ -9,19 +9,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
   <div className="col col--4">
     <table>
       <tr>
-        <td>Ease of Use</td>
+        <td>易用性</td>
         <td><Rater value="5"/></td>
       </tr>
       <tr>
-        <td>Extensibility</td>
+        <td>拓展性</td>
         <td><Rater value="0"/></td>
       </tr>
       <tr>
-        <td>Performance</td>
+        <td>性能</td>
         <td><Rater value="5"/></td>
       </tr>
       <tr>
-        <td>Security</td>
+        <td>安全性</td>
         <td><Rater value="5"/></td>
       </tr>
     </table>
@@ -30,12 +30,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
     <img src={useBaseUrl('img/patterns/Hermit.png')} alt="Hermit" />
   </div>
     <div className="col col--4">
-    Pros:
+    优点
     <ul>
       <li>Quick to make</li>
       <li>Smallest size</li>
     </ul>
-    Cons:
+    缺点
     <ul>
       <li>No remote resources</li>
       <li>No access to API</li>
@@ -43,11 +43,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
   </div>
 </div>
 
-## Description
+## 说明
 
 The Hermit recipe is a pattern for ultimate application isolation where all logic is self-contained in the Window and the binary exists merely to bootstrap the Window. There is no communication back to Rust from the Window, there is no localhost server, and the Window has no access to any remote resources. The Hermit is great for interactive Kiosk Mode and standalone HTML based games.
 
-## Diagram
+## 示意图
 
 import Mermaid, { colors } from '@theme/Mermaid'
 
@@ -66,9 +66,9 @@ import Mermaid, { colors } from '@theme/Mermaid'
       style RUST fill:${colors.orange.light},stroke:${colors.orange.dark},stroke-width:4px
       style WEBVIEW fill:${colors.blue.light},stroke:${colors.blue.dark},stroke-width:4px`} />
 
-## Configuration
+## 配置
 
-Here's what you need to add to your tauri.conf.json file:
+这是你需要在你的 tauri.conf.json 中添加的配置：
 
 ```json
 "tauri": {
