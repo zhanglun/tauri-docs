@@ -11,19 +11,19 @@ import Rater from '@theme/Rater'
   <div className="col col--4">
     <table>
       <tr>
-        <td>Ease of Use</td>
+        <td>易用性</td>
         <td><Rater value="4"/></td>
       </tr>
       <tr>
-        <td>Extensibility</td>
+        <td>拓展性</td>
         <td><Rater value="4"/></td>
       </tr>
       <tr>
-        <td>Performance</td>
+        <td>性能</td>
         <td><Rater value="3"/></td>
       </tr>
       <tr>
-        <td>Security</td>
+        <td>安全性</td>
         <td><Rater value="5"/></td>
       </tr>
     </table>
@@ -32,23 +32,23 @@ import Rater from '@theme/Rater'
     <img src={useBaseUrl('img/patterns/Multiwin.png')} alt="Multiwin" />
   </div>
   <div className="col col--4">
-    Pros:
+    优点
     <ul>
       <li>Windows can be spawned or destroyed at runtime</li>
       <li>Separation of concerns</li>
     </ul>
-    Cons:
+    缺点
     <ul>
       <li>Somewhat complex</li>
     </ul>
   </div>
 </div>
 
-## Description
+## 说明
 
 The Multiwin recipe will allow you to have multiple windows.
 
-## Diagram
+## 示意图
 
 import Mermaid, { colors } from '@theme/Mermaid'
 
@@ -74,9 +74,9 @@ import Mermaid, { colors } from '@theme/Mermaid'
       style WEBVIEW fill:${colors.blue.light},stroke:${colors.blue.dark},stroke-width:4px`} />
 
 
-## Configuration
+## 配置
 
-Here's what you need to add to your tauri.conf.json file:
+这是你需要在你的 tauri.conf.json 中添加的配置：
 ```json
 "tauri": {
   "allowlist": {},                  // all API endpoints are default false

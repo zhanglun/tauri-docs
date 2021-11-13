@@ -9,19 +9,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
   <div className="col col--4">
     <table>
       <tr>
-        <td>Ease of Use</td>
+        <td>易用性</td>
         <td><Rater value="2"/></td>
       </tr>
       <tr>
-        <td>Extensibility</td>
+        <td>拓展性</td>
         <td><Rater value="4"/></td>
       </tr>
       <tr>
-        <td>Performance</td>
+        <td>性能</td>
         <td><Rater value="5"/></td>
       </tr>
       <tr>
-        <td>Security</td>
+        <td>安全性</td>
         <td><Rater value="5" color="#fff04d"/></td>
       </tr>
     </table>
@@ -30,12 +30,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
     <img src={useBaseUrl('img/patterns/Lockdown.png')} alt="Lockdown" />
   </div>
   <div className="col col--4">
-    Pros:
+    优点
     <ul>
-      <li>Highest security rating</li>
+      <li>Highest 安全 rating</li>
       <li>Elegant and powerful</li>
     </ul>
-    Cons:
+    缺点
     <ul>
       <li>Rust skills required</li>
       <li>No remote resources</li>
@@ -44,11 +44,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 </div>
 
 
-## Description
+## 说明
 
 The Lockdown recipe is a minimal usage of the [Bridge pattern](/docs/usage/patterns/bridge), which only allows interaction between Rust and the Window via expiring JS Promise Closures that are injected into the Window by Rust and nulled as part of the callback.
 
-## Diagram
+## 示意图
 
 import Mermaid, { colors } from '@theme/Mermaid'
 
@@ -72,9 +72,9 @@ import Mermaid, { colors } from '@theme/Mermaid'
       style WEBVIEW fill:${colors.blue.light},stroke:${colors.blue.dark},stroke-width:4px`} />
 
 
-## Configuration
+## 配置
 
-Here's what you need to add to your tauri.conf.json file:
+这是你需要在你的 tauri.conf.json 中添加的配置：
 ```json
 "tauri": {
   "allowlist": {}                  // all API endpoints are default false

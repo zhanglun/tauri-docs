@@ -1,5 +1,5 @@
 ---
-title: Bridge
+title: 桥接
 ---
 
 import Rater from '@theme/Rater'
@@ -9,19 +9,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
   <div className="col col--4">
     <table>
       <tr>
-        <td>Ease of Use</td>
+        <td>易用性</td>
         <td><Rater value="3"/></td>
       </tr>
       <tr>
-        <td>Extensibility</td>
+        <td>拓展性</td>
         <td><Rater value="5"/></td>
       </tr>
       <tr>
-        <td>Performance</td>
+        <td>性能</td>
         <td><Rater value="4"/></td>
       </tr>
       <tr>
-        <td>Security</td>
+        <td>安全性</td>
         <td><Rater value="4"/></td>
       </tr>
     </table>
@@ -30,24 +30,24 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
     <img src={useBaseUrl('img/patterns/Bridge.png')} alt="Bridge" />
   </div>
     <div className="col col--4">
-    Pros:
+    优点:
     <ul>
-      <li>Highly configurable</li>
-      <li>No Rust skills required</li>
+      <li>高度可配置</li>
+      <li>不需要 Rust 技能</li>
     </ul>
-    Cons:
+    缺点:
     <ul>
-      <li>Some WebAPIs unavailable</li>
-      <li>Challenge to implement</li>
+      <li>一些 WebAPI 不可用</li>
+      <li>实现有挑战</li>
     </ul>
   </div>
 </div>
 
-## Description
+## 说明
 
-The Bridge recipe is a secure pattern where messages are passed between brokers via an implicit bridge using the API. It isolates functionality to scope and passes messages instead of functionality.
+桥接方法是一种安全模式，消息通过使用 API 的隐式桥接，在 brokers 之间传递。它将功能隔离在作用域之外，并传递消息而不是功能。
 
-## Diagram
+## 示意图
 
 import Mermaid, { colors } from '@theme/Mermaid'
 
@@ -78,9 +78,10 @@ import Mermaid, { colors } from '@theme/Mermaid'
       style RUST fill:${colors.orange.light},stroke:${colors.orange.dark},stroke-width:4px
       style WEBVIEW fill:${colors.blue.light},stroke:${colors.blue.dark},stroke-width:4px`} />
 
-## Configuration
+## 配置
 
-Here's what you need to add to your tauri.conf.json file:
+这是你需要在你的 tauri.conf.json 中添加的配置：
+
 ```json
 "tauri": {
   "allowlist": {                  // all API values are default false

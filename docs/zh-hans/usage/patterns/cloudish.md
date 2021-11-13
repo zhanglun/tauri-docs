@@ -9,19 +9,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
   <div className="col col--4">
     <table>
       <tr>
-        <td>Ease of Use</td>
+        <td>易用性</td>
         <td><Rater value="5"/></td>
       </tr>
       <tr>
-        <td>Extensibility</td>
+        <td>拓展性</td>
         <td><Rater value="3"/></td>
       </tr>
       <tr>
-        <td>Performance</td>
+        <td>性能</td>
         <td><Rater value="3"/></td>
       </tr>
       <tr>
-        <td>Security</td>
+        <td>安全性</td>
         <td><Rater value="2"/></td>
       </tr>
     </table>
@@ -30,24 +30,24 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
     <img src={useBaseUrl('img/patterns/Cloudish.png')} alt="Cloudish" />
   </div>
     <div className="col col--4">
-    Pros:
+    优点
     <ul>
-      <li>Similar to a SPA web-app</li>
-      <li>No Rust skills required</li>
+      <li>和一个单页应用一样</li>
+      <li>不需要 Rust 技能</li>
     </ul>
-    Cons:
+    缺点
     <ul>
-      <li>No access to Rust API</li>
-      <li>Uses a localhost server</li>
+      <li>无法访问 Rust API</li>
+      <li>使用本地服务器</li>
     </ul>
   </div>
 </div>
 
-## Description
+## 说明
 
-The Cloudish recipe is a pattern for maximum flexibility and app performance. It uses a localhost server, which means that your app will technically be available to other processes, like browsers and potentially other devices on the network. All of your assets are baked into the binary, but served as if they were distinct files.
+The Cloudish recipe is a pattern for maximum flexibility and app 性能. It uses a localhost server, which means that your app will technically be available to other processes, like browsers and potentially other devices on the network. All of your assets are baked into the binary, but served as if they were distinct files.
 
-## Diagram
+## 示意图
 
 import Mermaid, { colors } from '@theme/Mermaid'
 
@@ -76,9 +76,9 @@ import Mermaid, { colors } from '@theme/Mermaid'
       style SERVER fill:#49A24A,stroke:#2B6063,stroke-width:4px`} />
 
 
-## Configuration
+## 配置
 
-Here's what you need to add to your tauri.conf.json file:
+这是你需要在你的 tauri.conf.json 中添加的配置：
 ```json
 "tauri": {
   "allowlist": {

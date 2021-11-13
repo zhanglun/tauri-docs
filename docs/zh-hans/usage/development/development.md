@@ -20,8 +20,6 @@ Every framework has its own development tooling. It is outside of the scope of t
 
 在你第一次运行这个命令时，Rust 软件包管理器将需要几分钟时间来下载和构建所有需要的软件包。由于它们被缓存了，后续的构建会快很多，因为只有你的代码需要重建。
 
-Once Rust has finished building, the webview will open and it should display your web app. You can make changes to your web app, and if your tooling enables it, the webview should update automatically just like a browser. When you make changes to your Rust files, they will be rebuilt automatically and your app will restart.
-
 一旦 Rust 完成了构建，webview 就会打开，它应该显示你的 web 应用程序。你可以对你的应用进行修改，如果你的工具启用了它，webview 应该像浏览器一样自动更新。当你对你的 Rust 文件进行修改时，它们将被自动重建，你的应用程序将重新启动。
 
 <Alert title="A note about Cargo.toml and Source Control" icon="info-alt">
