@@ -4,7 +4,7 @@ const fs = require('fs')
 
 const languages = require('./supported-languages')
 
-const language = process.env.LANGUAGE || 'en'
+const language = process.env.LANGUAGE || 'zh-hans'
 
 const t = require(`./translations/${language}.json`)
 
@@ -16,9 +16,9 @@ const discordURL = 'https://discord.com/invite/tauri'
 const siteConfig = {
   title: 'Tauri Studio',
   tagline: t.config.tagline,
-  organizationName: 'Tauri Studio',
-  projectName: 'tauri',
-  baseUrl: `/${language}/`,
+  organizationName: 'zhanglun',
+  projectName: 'tauri-docs',
+  baseUrl: `/tauri-docs/`,
   favicon: 'img/favicon-32x32.png',
   url: 'https://tauri.studio',
   onBrokenLinks: 'ignore',

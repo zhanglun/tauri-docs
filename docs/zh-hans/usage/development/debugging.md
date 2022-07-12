@@ -1,35 +1,35 @@
 ---
-title: Debugging
+title: 调试 
 ---
 
 import Alert from '@theme/Alert'
 import Command from '@theme/Command'
 
-With all the moving pieces in Tauri, you may run into a problem that requires debugging. There are a handful of locations where error details are printed, and Tauri includes some tools to make the debugging process easier.
+所有的工作做到位之后，你可能会遇到需要调试的问题。有几个地方会打印出错误的细节，Tauri包括一些工具来使调试过程更容易。
 
-## Rust Console
+## Rust 控制台
 
-When you run a Tauri app in development mode you will have a Rust console available. This is in the terminal where you ran e.g. `tauri dev`. You can use the following code to print something to that console from within a Rust file:
+当你以开发模式运行 Tauri 时，你将会有一个可访问的 Rust 控制台。这个 Rust 控制台会在你运行`tauri dev` 的终端中。你可以使用下面代码从 Rust 文件中将一些内容打印到控制台中。
+
 
 ```rust
 println!("Message from Rust: {}", msg);
 ```
 
-Sometimes you may have an error in your Rust code, and the Rust compiler can give you lots of information. If, for example, `tauri dev` crashes, you can rerun it like this on Linux and macOS:
+有时你的Rust代码中可能会出现错误，Rust编译器可以给你很多信息。例如，如果 `tauri dev` 崩溃了，你可以在Linux和macOS上像这样重新运行它。
 
 ```sh
 RUST_DEBUG=1 tauri dev
 ```
 
-or like this on MS Windows:
+或者在 Window 中：
 
 ```sh
 set RUST_DEBUG=1
 tauri dev
 ```
 
-This will give you a granular stack trace. Generally speaking, the Rust compiler will help you by
-giving you detailed information about the issue, such as:
+这将给你一个细化的堆栈跟踪。一般来说，Rust编译器会通过给你关于这个问题的详细信息来帮助你，比如。
 
 ```
 error[E0425]: cannot find value `sun` in this scope
@@ -43,18 +43,18 @@ error: aborting due to previous error
 For more information about this error, try `rustc --explain E0425`.
 ```
 
-## WebView JS Console
+## WebView JS 控制台
 
-Right click in the WebView, and choose `Inspect Element`. This will open up a web-inspector similar to the Chrome or Firefox dev tools you are used to.
+在WebView中点击右键，并选择 "检查元素"。这将打开一个类似于你所使用的Chrome或Firefox开发工具的网络检查器。
 
-## Create a Debug Build
+## 创建调试构建
 
-There are cases where you might need to inspect the JS console in the final bundle, so Tauri provides a simple command to create a debugging bundle:
+有些情况下，你可能需要在最终的 bundle 中检查 JavaScript 控制台，所以 Tauri 提供了一个简单的命令来创建一个调试 bundle。
 
 <Command name="build --debug" />
 
-Like the normal build and dev processes, the first time you run this it will take more time than subsequent runs. The final bundled app will be placed in `src-tauri/target/debug/bundle`. That app will ship with the development console enabled.
+就像正常的构建和开发过程一样，第一次运行会比后续运行花费更多时间。最终打包的应用程序将被放在 `src-tauri/target/debug/bundle`中。这个应用程序将启用开发控制台。
 
-## Run Your App From the Terminal
+## 从 Terminal 中运行你的应用
 
-You can also run a built app from the terminal, which will also give you the Rust compiler notes (in case of errors) or your `println` messages. Just find the file `src-tauri/target/(release|debug)/[app name]` and either double click it (but be warned, the terminal will close on errors) or just run it in directly in your console.
+你也可以从终端运行一个已建的应用程序，这也会给你Rust编译器的注释（在有错误的情况下）或你的`println`信息。只要找到`src-tauri/target/(release|debug)/[app name]`这个文件，然后双击它（但要注意，终端会在出错时关闭）或者直接在控制台中运行它。
